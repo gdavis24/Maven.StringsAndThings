@@ -80,7 +80,22 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        return null;
+        boolean happy = false;
+
+
+        char [] split = input.toCharArray();
+        for (int i = 0; i < split.length; i++) {
+            if (split[i] == 'g') {
+                if (split[i - 1] == 'g' || split[i + 1] == 'g') {
+                    happy = true;
+
+
+                } else {
+                    happy = false;
+                }
+            }
+        }
+        return happy;
     }
 
 
