@@ -107,6 +107,18 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
-        return null;
+        int tripLetter = 0;
+        char charTemp ;
+        char [] split = input.toCharArray();
+        for (int i = 0; i < split.length - 1; i++) {
+            charTemp = split[i];
+
+            if (split[i] == charTemp) {
+                if (split[i] == charTemp  && split[i + 1] == charTemp && split[i + 2] == charTemp) {
+                    tripLetter++;
+                }
+            }
+        }
+        return tripLetter;
     }
 }
